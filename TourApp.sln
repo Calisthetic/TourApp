@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33213.308
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TourApp", "TourApp\TourApp.csproj", "{3DE9CA17-2984-4CEA-9B45-A685A9B4987F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TourAppTests", "TourAppTests\TourAppTests.csproj", "{D21A001E-F405-413C-AF66-78C646B668DA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3DE9CA17-2984-4CEA-9B45-A685A9B4987F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3DE9CA17-2984-4CEA-9B45-A685A9B4987F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3DE9CA17-2984-4CEA-9B45-A685A9B4987F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3DE9CA17-2984-4CEA-9B45-A685A9B4987F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D21A001E-F405-413C-AF66-78C646B668DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D21A001E-F405-413C-AF66-78C646B668DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D21A001E-F405-413C-AF66-78C646B668DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D21A001E-F405-413C-AF66-78C646B668DA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BD1B1A66-1245-463D-A49A-320C4CC80879}
+	EndGlobalSection
+EndGlobal
