@@ -23,7 +23,7 @@ namespace TourApp
         public MainWindow()
         {
             InitializeComponent();
-            MainFrame.Navigate(new Pages.HotelsPage());
+            MainFrame.Navigate(new Pages.MainMenu());
             Classes.PageManager.MainFrame = MainFrame;
         }
 

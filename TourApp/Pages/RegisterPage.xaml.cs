@@ -16,24 +16,18 @@ using System.Windows.Shapes;
 namespace TourApp.Pages
 {
     /// <summary>
-    /// Логика взаимодействия для MainMenu.xaml
+    /// Логика взаимодействия для RegisterPage.xaml
     /// </summary>
-    public partial class MainMenu : Page
+    public partial class RegisterPage : Page
     {
-        public MainMenu()
+        public RegisterPage()
         {
             InitializeComponent();
         }
 
-
-        private void BtnHotels_Click(object sender, RoutedEventArgs e)
+        private void Button_Click(object sender, RoutedEventArgs e)
         {
-            Classes.PageManager.MainFrame.Navigate(new HotelsPage());
-        }
-
-        private void BtnRegister_Click(object sender, RoutedEventArgs e)
-        {
-            Classes.PageManager.MainFrame.Navigate(new RegisterPage());
+            MessageBox.Show(Classes.Checker.CheckPassword(PasswordTextBox.Text.ToString()).ToString());
         }
     }
 }

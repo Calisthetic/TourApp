@@ -13,7 +13,14 @@
         <Style TargetType="TextBlock">
             <Setter Property="HorizontalAlignment" Value="Center"></Setter>
             <Setter Property="VerticalAlignment" Value="Center"></Setter>
-            <Setter Property="FontSize" Value="20"></Setter>
+            <Setter Property="FontSize" Value="24"></Setter>
+            <Setter Property="Height" Value="34"></Setter>
+        </Style>
+        <Style TargetType="TextBox">
+            <Setter Property="Height" Value="34"></Setter>
+            <!--<Setter Property="HorizontalAlignment" Value="Center"></Setter>
+            <Setter Property="VerticalAlignment" Value="Center"></Setter>
+            <Setter Property="FontSize" Value="20"></Setter>-->
         </Style>
     </Application.Resources>
 </Application>

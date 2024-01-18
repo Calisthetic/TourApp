@@ -10,9 +10,9 @@
 
     <Grid>
         <StackPanel VerticalAlignment="Center">
-            <Button Content="Hotels"></Button>
-            <Button Content="Hotels"></Button>
-
+            <Button Content="Hotels" Name="BtnHotels" Click="BtnHotels_Click"></Button>
+            <Button Content="Registration" Name="BtnRegister" Click="BtnRegister_Click"></Button>
+            <Button Content="Da"></Button>
         </StackPanel>
 
     </Grid>
