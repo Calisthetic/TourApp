@@ -42,33 +42,28 @@ namespace TourApp.Pages
             Classes.PageManager.MainFrame.Navigate(new AddEditPage(null));
         }
 
-        private void BtnDelete_Click(object sender, RoutedEventArgs e)
-        {
+        private void BtnDelete_Click(object sender, RoutedEventArgs e) {
             var hotelsForRemoving = DGridHotels.SelectedItems.Cast<Hotel>().ToList();
 
-            if (MessageBox.Show($"Really wanna detele {hotelsForRemoving.Count()} elements?", "Attention!", MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
-            {
-                try
-                {
+            if (MessageBox.Show($"Really wanna detele {hotelsForRemoving.Count()} elements?", "Attention!", 
+                MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes) {
+                try {
                     Models.TourBaseEntities.GetContext().Hotels.RemoveRange(hotelsForRemoving);
                     Models.TourBaseEntities.GetContext().SaveChanges();
                     MessageBox.Show("Successfuly deleted");
 
                     DGridHotels.ItemsSource = Models.TourBaseEntities.GetContext().Hotels.ToList();
                 }
-                catch (Exception ex)
-                {
+                catch (Exception ex) {
                     MessageBox.Show(ex.Message.ToString());
                 }
             }
         }
 
-        private void Page_IsVisibleChanged(object sender, DependencyPropertyChangedEventArgs e)
-        {
-            if (Visibility == Visibility.Visible)
-            {
-                Models.TourBaseEntities.GetContext().ChangeTracker.Entries().ToList().ForEach(p => p.Reload());
-                DGridHotels.ItemsSource = Models.TourBaseEntities.GetContext().Hotels.ToList();
+        private void Page_IsVisibleChanged(object sender, DependencyPropertyChangedEventArgs e) {
+            if (Visibility == Visibility.Visible) {
+                //Models.TourBaseEntities.GetContext().ChangeTracker.Entries().ToList().ForEach(p => p.Reload());
+                //DGridHotels.ItemsSource = Models.TourBaseEntities.GetContext().Hotels.ToList();
             }
         }
     }

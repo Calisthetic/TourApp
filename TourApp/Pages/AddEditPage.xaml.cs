@@ -23,19 +23,17 @@ namespace TourApp.Pages
     {
         private Hotel _currentHotel = new Hotel();
 
-        public AddEditPage(Hotel selectedHotel)
-        {
+        public AddEditPage(Hotel selectedHotel) {
             InitializeComponent();
-
             if (selectedHotel != null)
                 _currentHotel = selectedHotel;
-
             DataContext = _currentHotel;
-            ComboCountries.ItemsSource = Models.TourBaseEntities.GetContext().Countries.ToList();
+
+            ComboCountries.ItemsSource = 
+                Models.TourBaseEntities.GetContext().Countries.ToList();
         }
 
-        private void BtnSave_Click(object sender, RoutedEventArgs e)
-        {
+        private void BtnSave_Click(object sender, RoutedEventArgs e) {
             StringBuilder errors = new StringBuilder();
 
             if (string.IsNullOrWhiteSpace(_currentHotel.Name))
@@ -45,25 +43,18 @@ namespace TourApp.Pages
             if (_currentHotel.Country == null)
                 errors.AppendLine("Country?");
 
-            if (errors.Length > 0)
-            {
+            if (errors.Length > 0) {
                 MessageBox.Show(errors.ToString());
                 return;
             }
-
             if (_currentHotel.Id == 0)
-            {
                 Models.TourBaseEntities.GetContext().Hotels.Add(_currentHotel);
-            }
-
-            try
-            {
+            try {
                 Models.TourBaseEntities.GetContext().SaveChanges();
                 MessageBox.Show("Saved!");
                 Classes.PageManager.MainFrame.GoBack();
             }
-            catch (Exception ex)
-            {
+            catch (Exception ex) {
                 MessageBox.Show(ex.Message.ToString());
             }
         }

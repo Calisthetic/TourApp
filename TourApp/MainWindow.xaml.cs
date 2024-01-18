@@ -20,26 +20,20 @@ namespace TourApp
     /// </summary>
     public partial class MainWindow : Window
     {
-        public MainWindow()
-        {
+        public MainWindow() {
             InitializeComponent();
             MainFrame.Navigate(new Pages.MainMenu());
             Classes.PageManager.MainFrame = MainFrame;
         }
-
-        private void BtnBack_Click(object sender, RoutedEventArgs e)
-        {
+        private void BtnBack_Click(object sender, RoutedEventArgs e) {
             Classes.PageManager.MainFrame.GoBack();
         }
-
         private void MainFrame_ContentRendered(object sender, EventArgs e)
         {
-            if (MainFrame.CanGoBack)
-            {
+            if (MainFrame.CanGoBack) {
                 BtnBack.Visibility = Visibility.Visible;
             }
-            else
-            {
+            else {
                 BtnBack.Visibility = Visibility.Hidden;
             }
         }
